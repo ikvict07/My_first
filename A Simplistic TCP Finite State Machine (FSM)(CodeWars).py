@@ -16,7 +16,7 @@ def traverse_TCP_states(events):
     for i in events:
         try:
             state = states[state][i]
-        except KeyError:
+        except: # or there can be 'exept KeyError:'
             return 'ERROR'
     return state
 
