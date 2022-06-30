@@ -58,8 +58,7 @@ def recreate(dont_touch):
         regenerate_btn.grid(row=1, column=4)
 
 
-def write_to(data_to_write):
-    # TODO сделать чтоб записывалось в список собранных комбинаций
+def switch_to_next_player():
     def renew_dont_touch():
         global dont_touch_list
         for i in dont_touch_list:
@@ -75,10 +74,9 @@ def write_to(data_to_write):
     global canvas
     data = generate_data()
     canvas.delete('all')
-
-
-
-
+def write_to(data_to_write):
+    # TODO сделать чтоб записывалось в список собранных комбинаций
+    switch_to_next_player()
 
 user_1_stats = StringVar()
 user_1_stats.set(f'''
